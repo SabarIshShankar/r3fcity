@@ -21,7 +21,7 @@ function Sound({ url, distance }) {
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/scene-drace.glb");
+  const { nodes, materials } = useGLTF("/scene-draco.glb");
   useFrame(() => (group.current.rotation.y += 0.003));
   return (
     <group
@@ -52,8 +52,8 @@ export default function Model(props) {
         <group position={[100000, 120000, 2000]}>
           <Sound url="/zapsplat_icecream.mp3" distance={10} />
         </group>
-        <mesh position={[250000, -20000, 50000]}>
-          <sphereBufferGeometry attach="geometry" args={(30000, 32, 32)} />
+        <mesh position={[250000, -200000, 50000]}>
+          <sphereBufferGeometry attach="geometry" args={[30000, 32, 32]} />
           <meshBasicMaterial attach="material" color="#ff1020" />
         </mesh>
       </group>
